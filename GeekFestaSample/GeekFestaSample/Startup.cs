@@ -29,6 +29,7 @@ namespace GeekFestaSample
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            DependencyInjection(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,7 +49,7 @@ namespace GeekFestaSample
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
 
-        private void DependencyInjectoin(IServiceCollection services)
+        private void DependencyInjection(IServiceCollection services)
         {
             services.AddScoped<IGetWildUseCase, GetWildInteractor>();
         }

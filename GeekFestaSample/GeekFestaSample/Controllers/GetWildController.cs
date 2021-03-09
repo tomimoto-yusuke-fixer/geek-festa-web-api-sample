@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GeekFestaSample.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class GetWildController
     {
         private readonly IGetWildUseCase _getWildUseCase;
