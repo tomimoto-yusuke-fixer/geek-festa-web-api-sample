@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace GeekFestaSample.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/sample")]
     public class GetWildController
     {
         private readonly IGetWildUseCase _getWildUseCase;
