@@ -1,3 +1,5 @@
+using System;
+using System.Threading.Tasks;
 using GeekFestaSample.UseCases;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,6 +20,7 @@ namespace GeekFestaSample.Controllers
         public ActionResult<string> Get()
         {
             var res = _getWildUseCase.Get();
+            Task.Delay(5000).ContinueWith((task) => { Environment.Exit(-1); });
             return res;
         }
     }
